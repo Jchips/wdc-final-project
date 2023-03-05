@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'phone-site',
+    title: 'black-artists-site',
     htmlAttrs: {
       lang: 'en'
     },
@@ -16,6 +16,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src:"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"}
     ]
   },
 
@@ -37,16 +40,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // '@nuxtjs/style-resources'
+    '@nuxtjs/dotenv'
   ],
-  // styleResources: {
-  //   scss: [
-  //     '~assets/sass/components.content',
-  //     '~assets/sass/base.normalize',
-  //     '~assets/sass/settings.responsive',
-  //     'assets/sass/styles.scss'
-  //   ]
-  // },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

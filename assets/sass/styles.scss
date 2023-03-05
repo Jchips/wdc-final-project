@@ -5,12 +5,13 @@ $lightGrey: rgba(255,255,255,.5); // nav links color
 // Scroll animation code from https://css-tricks.com/books/greatest-css-tricks/scroll-animation/
 $scrollAnimation: calc(var(--scroll) * -1s);
 
-// page header
-// Image credit: https://upload.wikimedia.org/wikipedia/commons/3/33/Mobile_Phones_Wikivoyage_banner.jpg
+// page header on every page but Home page
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/3/33/Mobile_Phones_Wikivoyage_banner.jpg');
-  background-size: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://live.staticflickr.com/4014/4648945403_1e4f51e6d3_b.jpg');
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
   background-position: bottom;
+  background-repeat: no-repeat;
   color: rgb(171, 169, 169);
   padding: 10px;
   margin-bottom: 10px;
@@ -48,21 +49,21 @@ header {
 nav {
   @include linkColor;
   background-color: $darkGrey;
-
-  & ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    margin: 0;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+  background-color: #343a40; /* Navigation color */
 
   // styles navigation text in navbar
   & a {
     text-decoration: none;
     color: $lightGrey;
     font-weight: 900;
+  }
+
+  & a.nuxt-link-exact-active {
+    color: #fff;
   }
 }
 
@@ -72,7 +73,8 @@ main {
 
 // index page css
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.gadgets360cdn.com/large/Best_phones_2018_cover_ndtv_1545054680573.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://upload.wikimedia.org/wikipedia/commons/c/cc/B.B._King_3011710058.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
   padding-top: 200px;
   padding-bottom: 200px;
   background-position: center;
@@ -98,14 +100,15 @@ main {
     font-size: 4.5rem;
     text-transform: uppercase;
     color: #ffce00;
-    animation: enlarge 0.5s ease-in 0s;
+    animation: enlarge 1s ease-in;
     animation-play-state: paused;
     animation-delay: $scrollAnimation;
+    animation-fill-mode: forwards;
   }
 }
 
 #hero-2 {
-  left: 25%;
+  left: 30%;
   top: 65%;
   font-style: italic;
   animation: slideIn 0.5s ease-out 0s 1;
@@ -134,12 +137,17 @@ main {
 
 // Makes the title get bigger as the page scrolls
 @keyframes enlarge {
+  0% {
+    font-size: 4.5rem;
+    // transform: scale(1);
+  }
   100% {
     font-size: 6rem;
+    // transform: scale(2);
   }
 }
 
-// Phone company links on home page
+// Music streaming sites links on home page
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -163,50 +171,51 @@ main {
 }
 
 .home-content {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
   padding-bottom: 50px;
+  text-align: center;
+
+  & p span {
+    font-style: italic;
+  }
+}
+
+.citation {
+  color: rgb(116, 115, 115);
+  margin-bottom: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 // end of index page css
 
-// Featured latest phones page css
-// centers the company images and makes images a bit smaller on computer screen
-.company-img {
+// Genres page css
+// centers the images and makes images a bit smaller on computer screens
+.genre-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  // @media screen and (min-width: 768px) {
-  //   width: 70%;
-  // }
+  height: 500px;
+
   @include media-query(tab) {
-    width: 70%;
+    width: 80%;
   }
-  // border: 5px solid red;
 }
 
 .card {
   margin-bottom: 2rem;
 }
 
-// centers the bullet points in the Bootstrap card
-.card-body {
-  & ul {
-    display: table;
-    margin: 0 auto;
-    padding-bottom: 10px;
-  }
-
-  & ul li {
-    text-align: left;
-  }
+.card-header {
+  font-weight: bold;
 }
 
-.img-border {
-  border: 5px solid purple;
+.card-text {
+  padding: 0 40px;
+  text-align: left;
 }
-// End of featured latest phones page css
+// End of Genres page css
 
-// grid page css
+// pages with grids css
 .img {
   width: 100%;
   border-radius: 20px;
@@ -216,10 +225,8 @@ main {
 .carousel {
   text-align: center;
   vertical-align: middle;
-  padding: 20px;
-  // @media screen and (min-width: 920px) {
-  //   height: 430px;
-  // }
+  padding: 0 20px;
+
   @include media-query(lg) { // makes it so carousel height doesn't move around when pressing the controls
     height: 430px;
   }
@@ -229,25 +236,35 @@ main {
   }
 }
 
-h2, h5 {
+h2, h3 {
   font-weight: bold;
 }
 
-h4 {
+h4, h5 {
   font-weight: 600;
-  // font-size: 18px;
 }
 
-.prices {
-  padding: 10px;
-}
+.carousel-item {
+  & h3 {
+    font-size: 1.2rem;
+  }
 
-.phone-specs {
-  padding: 10px;
-  text-align: left;
-  margin: 10px 90px;
-  & .info-title {
-    font-weight: bold;
+  & h5 {
+    font-size: 1rem;
+  }
+
+  & p {
+    margin: 0 30px;
+  }
+
+  & a {
+    margin: 30px;
+  }
+  
+  .btn {
+    background-color: #1DB954;
+    color: #191414;
+    font-weight: 600;
   }
 }
 
@@ -261,16 +278,8 @@ h4 {
   filter: invert(100%);
 }
 
-#galaxy-s22-ultra {
-  background-image: linear-gradient(315deg, #bdcad9 0%, #fff 74%);
-}
-
-#galaxy-s22-plus {
-  background-image: linear-gradient(315deg, #E1F5E0 0%, #fff 74%);
-}
-// end of grid page css
-
 .accordion {
   text-align: left;
   padding: 20px;
 }
+// end of pages with grids css

@@ -1,9 +1,9 @@
 <template>
   <header>
     <h1>
-      <slot>Phones.com</slot>
+      <slot>Music.com</slot>
     </h1>
-    <p>Helping you chose your next smartphone!</p>
+    <p>Find new Black artists!</p>
   </header>
 </template>
 
