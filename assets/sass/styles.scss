@@ -138,12 +138,10 @@ main {
 // Makes the title get bigger as the page scrolls
 @keyframes enlarge {
   0% {
-    font-size: 4.5rem;
-    // transform: scale(1);
+    transform: scale(1);
   }
   100% {
-    font-size: 6rem;
-    // transform: scale(2);
+    transform: scale(2);
   }
 }
 
@@ -216,6 +214,11 @@ main {
 // End of Genres page css
 
 // pages with grids css
+.img-container {
+  display: flex;
+  align-items: center;
+}
+
 .img {
   width: 100%;
   border-radius: 20px;
@@ -228,7 +231,7 @@ main {
   padding: 0 20px;
 
   @include media-query(lg) { // makes it so carousel height doesn't move around when pressing the controls
-    height: 430px;
+    height: 440px;
   }
 
   & p {

@@ -16,7 +16,7 @@
           <div class="accordion-body">
             <!-- Creates a grid inside the accordion with an image on the left and carousel on the right -->
             <div class="row">
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-12">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-12 img-container">
                 <img :src="artist.artists.items[0].data.visuals.avatarImage.sources[0].url" class="img img-fluid"
                   :alt="`image of ${artist.artists.items[0].data.profile.name}`">
               </div>
