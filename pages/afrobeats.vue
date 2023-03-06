@@ -46,7 +46,7 @@ export default {
       url: 'https://spotify23.p.rapidapi.com/search/',
       params: { q: 'burna boy', type: 'multi', offset: '0', limit: '10', numberOfTopResults: '5' },
       headers: {
-        'X-RapidAPI-Key': `${process.env.SPOTIFY_API_KEY}`,
+        'X-RapidAPI-Key': `${process.env.NUXT_ENV_SPOTIFY_API_KEY}`,
         'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
       }
     };
@@ -63,7 +63,7 @@ export default {
         q: 'rema', type: 'multi', offset: '0', limit: '10', numberOfTopResults: '5'
       },
       headers: {
-        'X-RapidAPI-Key': `${process.env.SPOTIFY_API_KEY}`,
+        'X-RapidAPI-Key': `${process.env.NUXT_ENV_SPOTIFY_API_KEY}`,
         'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
       }
     };
