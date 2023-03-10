@@ -32,12 +32,25 @@ export default {
           born: "July 2, 1991 (age 31 years), Port Harcourt, Nigeria",
           source: "Wikipedia"
         }
-      ]
+      ],
+      title: 'Afrobeats'
     }
   },
   components: {
     HeaderComp,
     Accordions
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Find Black afrobeats artists to look into this Black history month and any time of the year. Learn more about them, find out their most popular songs, and then find and listen to them on Spotify. Not to be confused with the \'Afrobeat\' (without the \'S\') genre. Includes artists such as Burna Boy and Rema.'
+        }
+      ]
+    }
   },
   mounted() {
     // API request to Burna Boy info

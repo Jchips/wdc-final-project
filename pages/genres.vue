@@ -4,9 +4,9 @@
     <header-comp>Genres</header-comp>
     
     <!-- Makes a card for each different image using v-for loop with an array -->
-    <GenreCard :images="images" :learnMore="learnMore" :alts="alts" :imageTitle="imageTitle" :genre="genre"
+    <genre-card :images="images" :learnMore="learnMore" :alts="alts" :imageTitle="imageTitle" :genre="genre"
       :genreDescription="genreDescription" :descriptionCreds="descriptionCreds">
-    </GenreCard>
+    </genre-card>
   </div>
 </template>
 
@@ -35,7 +35,20 @@ export default {
         "In 2006, a crew of young musicians from Nigeria set up the Hottest Coalition of Nigerian DJs. The group comprised artists living in the country as well as in the growing diaspora around the world. Their mission was to promote the kind of music that was popular in West Africa at the time, by acts like P-Square, 2Baba, and D'banj. These were tunes with elements of electronic and dance music set to African percussion, as well as including hints of highlife, dancehall, hip-hop, and R&B — origins traceable across the spectrum of Black expression. “It was obvious that [Africans living abroad] were craving their own [music], because that's one of the ways they could connect back home,” says DJ Neptune, one of the earliest members of the coalition. “This was before we started having blogs coming into the game,” he says. Over the years, the kind of music they were promoting has become known as Afrobeats, a term that describes the most popular music coming out of West Africa. Coined in the aughts, Afrobeats (with an “S”) is similar in name to the Afrobeat music popularized by Fela Kuti in the 1970s but is distinct in its more modern origin and flavor. While Kuti's music was characteristically political and orchestral, Afrobeats is often jovial, digitally produced, and sung in English, West African, and pidgin languages.",
         "Funk is a musical genre that developed in the United States by African-American musicians in the 1960s. Funk was born from the influence of many genres: jazz, R&B, soul, and African grooves. Over the decades it has influenced jazz, R&B and soul music in return, and it gave birth to the entire genre of hip-hop. But despite its multiple points of origin, funk is often traced back to the work of one man. James Brown is known as the godfather of funk."],
       descriptionCreds: ["The Library of Congress", "MasterClass", "RollingStone",
-        "MN2S and Hakkens, Chris, et al. “Funk.” Store Norske Leksikon, https://snl.no/funk."]
+        "MN2S and Hakkens, Chris, et al. “Funk.” Store Norske Leksikon, https://snl.no/funk."],
+      title: 'Genre'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Information on the origination of the popular music genres: hip-hop/rap, R&B/soul, afrobeats and funk.'
+        }
+      ]
     }
   },
   components: {

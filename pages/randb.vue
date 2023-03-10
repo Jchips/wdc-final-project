@@ -32,6 +32,19 @@ export default {
           born: "June 24, 1992 (age 30 years), Baltimore, MD",
           source: "Wikipedia"
         }
+      ],
+      title: 'R&B/Soul'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Find Black R&B/soul artists to look into this Black history month and all throughout the year. Learn more about them, find out their most popular songs, and then find and listen to them on Spotify. Includes artists such as 6LACK and H.E.R.'
+        }
       ]
     }
   },

@@ -6,6 +6,3 @@
     <p>Find new Black artists!</p>
   </header>
 </template>
-
-<script>
-</script>

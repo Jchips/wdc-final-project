@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Find Black musical artists in music genres that were originated from Black people. So far, we feature the genres: hip-hop/rap, R&B/soul, afrobeats and funk.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

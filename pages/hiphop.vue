@@ -32,6 +32,19 @@ export default {
           born: "January 28, 1985 (age 38 years), Frankfurt, Germany",
           source: "Wikipedia"
         }
+      ],
+      title: 'Hip-Hop/Rap'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Find Black hip-hop/rap artists to look into this Black history month and any time of the year. Learn more about them, find out their most popular songs, and then find and listen to them on Spotify. Includes artists such as J. Cole and Kendrick Lamar.'
+        }
       ]
     }
   },

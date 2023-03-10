@@ -83,6 +83,23 @@
 <script>
 export default {
   name: "IndexPage",
+  data() {
+    return {
+      title: 'Home'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Black music artists have really inspired and created many of popular genres of music that we listen to today. hip-hop/rap, R&B/soul, afrobeats, and funk all originated from the Black community. Look here to find Black music artists in genres that were originated from Black people.'
+        }
+      ]
+    }
+  },
   mounted() {
     // Animates the header text on page scroll 
     // Code from: https://css-tricks.com/books/greatest-css-tricks/scroll-animation/ 
@@ -96,6 +113,6 @@ export default {
       },
       false
     );
-  }
+  },
 };
 </script>

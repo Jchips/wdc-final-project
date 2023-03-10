@@ -32,6 +32,19 @@ export default {
           born: "1969",
           source: "Wikipedia"
         }
+      ],
+      title: 'Funk'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Find Black funk artists to look into this Black history month and any time of the year. Learn more about them, find out their most popular songs, and then find and listen to them on Spotify. Includes artists such as James Brown and Earth, Wind & Fire.'
+        }
       ]
     }
   },
