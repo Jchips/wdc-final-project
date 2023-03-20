@@ -40,7 +40,7 @@
                         profile</a>
                     </div>
                     <!-- Loops thru 10 of the artist's popular tracks and makes page for each of them-->
-                    <div v-for="track in artist.tracks.items" :key="index" class="carousel-item">
+                    <div v-for="track in artist.tracks.items" :key="track" class="carousel-item">
                       <h2>{{ artist.artists.items[0].data.profile.name }}</h2>
                       <h3>Popular tracks</h3>
                       <h5>Track: {{ track.data.name }}</h5>

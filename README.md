@@ -1,5 +1,9 @@
 # black-artists-site
 
+This Black History Month 2023, find Black musical artists in music genres that were originated from Black people! So far, we feature the genres: hip-hop/rap, R&B/soul, afrobeats and funk.
+
+Live site: <https://exquisite-melomakarona-b3b8ad.netlify.app>
+
 ## Build Setup
 
 ```bash
